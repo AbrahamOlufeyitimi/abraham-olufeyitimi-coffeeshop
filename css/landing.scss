@@ -1,0 +1,485 @@
+@use './partials/global' as *;
+
+//Variables
+@use './partials/variables' as *;
+
+
+body {
+    background-color: $light-gray-color;
+}
+
+
+
+.header {
+    background-color: $secondary-color;
+    height: 9.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        &-anchor {
+            margin-left: 1.25rem;
+        }
+
+        &-image {
+            height: 90%;
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 3.75rem;
+        color: $graphite-color;
+
+        &-anchor {
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+.primary-nav {
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 1.875rem;
+        margin-right: 1.875rem;
+    }
+    &__item {
+        font-size: 1.3125rem;
+
+        &--anchor {
+            text-decoration: none;
+            color: $graphite-color;
+
+            &.item--blue {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.second-section {
+    background-color: $secondary-color;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        height: 25rem;
+        width: 100%;
+
+    }
+    &__content {
+        justify-content: flex-end;
+        padding: 7.5rem;
+
+    }
+        &__title {
+            display: inline;
+            font-weight: 300;
+            font-size: 3.75rem;
+        }
+
+        &__text {
+            padding-bottom: 1.875rem;
+            width: 55%;
+        }
+
+        &__btn {
+            // padding: 1.25rem;
+            background: $primary-color;
+            width: 14rem;
+            color: $white-color;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            text-align: center;
+
+            &--border {
+                
+                border: .1875rem solid $graphite-color;
+                position: relative;
+                top: -0.5rem;
+                left: -0.5rem;
+                width: 14rem;
+                
+
+                padding: 1rem;
+
+                pointer-events: none;
+                box-sizing: border-box;
+                transition: top 0.3s, left 0.3s;
+                
+
+            }
+        }
+        
+        .second-section__btn:active .second-section__btn--border {
+            top: 0rem;
+            left: 0rem;
+        }
+
+    &__image {
+        justify-content: flex-end;
+        padding: 7.5rem;
+        align-items: center;
+
+        .second-section__coffee--bag { 
+            max-width: 100%;
+            height: auto;;
+        }
+    }
+}
+
+
+
+
+.second-section__title .second-section__text .second-section__btn {
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3.75rem;
+
+    &__title {
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 300;
+    }
+
+    .products-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+    
+    
+        .product-card {
+            width: 23%;
+            background-color: $white-color;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 .3125rem 0.5625rem -0.0625rem;
+            box-shadow: rgba(0, 0, 0, 0.25);
+    
+            &__image {
+                width: 50%;
+                height: 17.5rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+    
+            &__info {
+                width: 100%;
+                height: 100%;
+                background-color: $secondary-color;
+                border-radius: 0 0 1rem 1rem;
+                display: flex;
+                flex-direction: column;
+    
+            }
+                &__text {
+                    display: flex;
+                    justify-content: space-around;
+                }
+    
+                &__item-one {
+                    display: flex;
+                    flex-direction: column;
+                    width: 75%;
+                }
+                &__item-two {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 10%;
+                }
+    
+                &__price {
+                    width: 100%;
+                    background-color: $secondary-color;
+                    border-radius: 0 0;
+                    text-align: end;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: $primary-color;
+                }
+    
+                &__title {
+                    font-size: 2.0625rem;
+                    font-weight: 300;
+                    margin-left: .625rem;
+                    margin-bottom: .125rem;
+                    margin-top: 1.25rem;
+                }
+    
+                &__quantity {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $dark-gray-color;
+                    margin-left: .625rem;
+                    margin-top: 0.1875rem;
+                }
+            
+        }
+    }
+    
+    
+    
+    .products-btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+        margin-left: 3rem;
+    
+        .third-section__btn {
+            padding: 1.25rem;
+            background: $primary-color;
+            width: 11.25rem;
+            color: $white-color;
+            text-decoration: none;
+            text-align: center;
+        
+        
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+}    
+
+
+.second-section__btn:active .second-section__btn--border {
+    top: 0rem;
+    left: 0rem;
+}
+
+
+
+
+.fourth-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: $white-color;
+    padding-top: 6.25rem;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+
+    .section-block { 
+        display: flex;
+        flex-direction: column;
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+
+            .section-title {
+                font-size: 3.75rem;
+                font-weight: 300;
+                margin-bottom: 1rem;
+            }
+
+            .section-description {
+                width: 55%;
+            }
+        }
+
+        .images-section {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            margin-bottom: 2rem;
+
+            .planting, .coffee-bean, .coffee-cup {
+                width: 3.125rem;
+            }
+        }
+        
+
+        .section-btn {
+            display: flex;
+            text-align: center;
+
+            .fourth-section__btn {
+                padding: 1.25rem;
+                background: $primary-color;
+                width: 11.25rem;
+                color: $white-color;
+                text-decoration: none;
+            
+            
+                position: relative;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+
+
+    .block-two {
+        
+        .image-container {
+            position: relative;
+            width: 18.75rem;
+            height: 18.75rem;
+
+            
+    
+            .picture-border {
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                width: calc(100% + 6rem);
+                height: calc(100% + 6rem);
+                border: .25rem solid $primary-color;
+                box-sizing: border-box;
+            
+                z-index: 3;
+            }
+    
+            .image--feature {
+                position: absolute;
+    
+                &.top-image {
+                    height: 17.5rem;
+                    z-index: 2;
+                    left: 40%;
+                    top: 20%;
+
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                &.bottom-image {
+                    width: 25rem;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+.image-container:hover {
+    transform: rotate(360deg);
+}
+
+
+.discount-section {
+    background-color: $white-color;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        height: 7rem;
+        background-color: $graphite-color;
+        width: 90%;
+        color: $white-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: discount-section__box 2.5s infinite;
+
+    }
+
+
+    @keyframes discount-section__box {
+        0% {
+            background-color: $graphite-color;
+        }
+        50% {
+            background-color: $primary-color;
+        }
+        100% {
+            background-color: $graphite-color;
+        }
+    }
+
+        &__item {
+            font-size: 2.8125rem;
+            font-weight: 400;
+            margin-left: 2rem;
+        }
+            &__bold-text {
+                font-weight: 700;
+            }
+        
+    
+} 
+
+
+
+
+
+footer {
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+
+    .footer-logo__left,
+    .footer-logo__right {
+        width: 3.125rem;
+        opacity: 20%;
+    }
+
+    .footer-logo__left {
+    
+        position: relative;
+        right: 6.875rem;
+        top: 1.25rem
+    }
+
+    .footer-logo__right {
+    
+        position: relative;
+        left: 6.5rem;
+        top: 6.875rem
+    }
+    
+    .address-section, .hours-section, .social-section {
+        &__title {
+            font-size: 2.0625rem;
+            font-weight: 300;
+        
+        }
+    
+        .hours-section__item {
+            font-weight: 700;
+        }
+    }
+}
+
+

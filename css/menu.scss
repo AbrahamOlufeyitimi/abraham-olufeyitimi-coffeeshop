@@ -1,0 +1,192 @@
+@use './partials/global' as *;
+
+@use './partials/variables' as *;
+
+
+
+body {
+    background-color: $light-gray-color;
+}
+
+
+
+
+
+
+.header {
+    background-color: $secondary-color;
+    height: 9.375rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    
+        &-anchor {
+            margin-left: 1.25rem;
+        }
+        
+        &-image {
+            height: 90%;
+        }
+    }
+
+
+    &__title {
+        font-weight: 300;
+        font-size: 3.75rem;
+        color: $graphite-color;
+    
+        &-anchor {
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+.primary-nav {
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 1.875rem;
+        margin-right: 1.875rem;
+    }
+    &__item {
+        font-size: 1.3125rem;
+
+        &--anchor {
+            text-decoration: none;
+            color: $graphite-color;
+
+            &.item--blue {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+.banner {
+    position: relative;
+    
+    &__image {
+        width: 100%;
+        height: 43.75rem;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    &-title {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        width: 18.75rem;
+        height: 12.5rem;
+        font-size: 3.75rem;
+        font-weight: 300;
+        text-align: center;
+        background-color: $graphite-color;
+        color: $white-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        z-index: 1;
+    
+        .banner-border {
+        border: .1875rem solid $primary-color;
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        width: 18.75rem;
+        height: 100%;
+        z-index: 2;
+        }
+    }
+}
+
+
+
+
+
+
+.secondary-nav__list {
+    background-color: $graphite-color;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    &-item {
+        list-style-type: none;
+        display: inline;
+        font-size: 1.3125rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-left: .25rem solid $primary-color;
+        padding-right: 1.5rem;
+    
+        .secondary-nav__anchor {
+            text-decoration: none;
+            color: $white-color;
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+.order-option {
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.special {
+        background-color: $light-gray-color;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+        &__title {
+            font-size: 3.75rem;
+            font-weight: 300;
+            text-align: center;
+            margin: 1rem;
+        }
+
+        &__name {
+            font-size: 2.0625rem;
+            font-weight: 300;
+            text-align: center;
+            margin: .3125rem;
+        }
+        
+        &__description {
+            font-size: 1.125rem;
+            font-weight: 400;
+            font-style: italic;
+            width: 30%;
+            text-align: center;
+            margin: .25rem;
+        }
+        
+        
+        &__price {
+            color: $primary-color;
+        }
+    
+}
+
