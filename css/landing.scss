@@ -163,7 +163,6 @@ body {
 
 
 
-
 .third-section {
     display: flex;
     flex-direction: column;
@@ -354,7 +353,7 @@ body {
             width: 18.75rem;
             height: 18.75rem;
 
-            
+            transition: transform 0.5s ease-in-out;
     
             .picture-border {
                 position: absolute;
@@ -385,12 +384,22 @@ body {
                     z-index: 1;
                 }
             }
+            
+        }
+
+        .image-container:hover .top-image {
+            animation: spin-can 2s linear infinite;
         }
     }
 }
 
-.image-container:hover {
-    transform: rotate(360deg);
+@keyframes spin-can {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 

@@ -265,6 +265,7 @@ body {
   position: relative;
   width: 18.75rem;
   height: 18.75rem;
+  transition: transform 0.5s ease-in-out;
 }
 .fourth-section .block-two .image-container .picture-border {
   position: absolute;
@@ -290,11 +291,18 @@ body {
   width: 25rem;
   z-index: 1;
 }
-
-.image-container:hover {
-  transform: rotate(360deg);
+.fourth-section .block-two .image-container:hover .top-image {
+  animation: spin-can 2s linear infinite;
 }
 
+@keyframes spin-can {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .discount-section {
   background-color: #FFF;
   height: 25rem;
